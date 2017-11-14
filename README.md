@@ -22,7 +22,7 @@ Run the app on iPhone simulator:
 react-native run-ios
 ```
 
-Run the app on Android simulator: (The simulator must be started through Android Virtual Devices) 
+Run the app on Android simulator: (The simulator must first be started through Android Virtual Devices) 
 ```
 react-native run-android
 ```
