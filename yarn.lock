@@ -3416,6 +3416,16 @@ react-native-linear-gradient@^2.3.0:
   dependencies:
     prop-types "^15.5.10"
 
+react-native-maps@^0.17.1:
+  version "0.17.1"
+  resolved "https://registry.yarnpkg.com/react-native-maps/-/react-native-maps-0.17.1.tgz#ab2236341fd984dac8864202ae55331bc262f60c"
+
+react-native-photo-grid-frame@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/react-native-photo-grid-frame/-/react-native-photo-grid-frame-2.0.1.tgz#8022dce124aa1d929cf8ac94727625a795febc0f"
+  dependencies:
+    lodash "^4.17.4"
+
 react-native-router-flux@^4.0.0-beta.23:
   version "4.0.0-beta.23"
   resolved "https://registry.yarnpkg.com/react-native-router-flux/-/react-native-router-flux-4.0.0-beta.23.tgz#08f903176d7003dd86110f6f06e84fc82d9a9362"

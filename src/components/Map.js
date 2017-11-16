@@ -1,15 +1,20 @@
 import React from 'react';
 import GradientBackground from './GradientBackground'
-import {
-  StyleSheet,
-  Text,
-  View,
-} from 'react-native';
+import MapView, { PROVIDER_GOOGLE }from 'react-native-maps';
+import { StyleSheet, View } from 'react-native';
 
 const Map = (props) => (
     <GradientBackground>
         <View style={ styles.container }>
-            <Text style={ styles.text }>Map</Text>
+            <MapView
+                style={ styles.map }
+                initialRegion={{
+                    latitude: 37.78825,
+                    longitude: -122.4324,
+                    latitudeDelta: 0.0922,
+                    longitudeDelta: 0.0421,
+                }}
+            />
         </View>
     </GradientBackground>
 );
@@ -20,12 +25,10 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
     },
-    text: {
-        alignSelf: 'center',
-        fontSize: 26,
-        backgroundColor: 'transparent',
-        color: 'white',
-    },
+    map: {
+        width: '100%',
+        height: '100%',
+    }
 });
 
 export default Map;
