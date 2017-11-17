@@ -1,5 +1,6 @@
-import React from 'react';
-import GradientBackground from './GradientBackground'
+import React, { Component }from 'react';
+import GradientBackground from './GradientBackground';
+import SplashScreen from 'react-native-splash-screen';
 import {
     View,
     Text,
@@ -8,21 +9,42 @@ import {
     TouchableHighlight,
 } from 'react-native';
 
-const App = (props) => {
-    return (
-        <GradientBackground>
-            <View style={ styles.logoContainer }>
-                <Image source={ require('../../resources/logox2.png') } style={ styles.logo } />
-            </View>
-            <View style={ styles.loginContainer }>
-                <TouchableHighlight underlayColor='white' style={ styles.buttonContainer } onPress={ () => props.Actions.replace('tutorial') }>
-                    <Text style={ styles.buttonText }>Login with Facebook</Text>
-                </TouchableHighlight>
-                <Text onPress={ () => props.Actions.replace('main')} style={ styles.smallText }>App name here</Text>
-            </View>
-        </GradientBackground>
-    );
-}
+class App extends Component {
+    componentDidMount() {
+        SplashScreen.hide();
+    }
+    render() {
+        return (
+            <GradientBackground>
+                <View style={ styles.logoContainer }>
+                    <Image source={ require('../../resources/logox2.png') } style={ styles.logo } />
+                </View>
+                <View style={ styles.loginContainer }>
+                    <TouchableHighlight underlayColor='white' style={ styles.buttonContainer } onPress={ () => this.props.Actions.replace('tutorial') }>
+                        <Text style={ styles.buttonText }>Login with Facebook</Text>
+                    </TouchableHighlight>
+                    <Text onPress={ () => this.props.Actions.replace('main')} style={ styles.smallText }>App name here</Text>
+                </View>
+            </GradientBackground>
+        );
+    }
+};
+
+// const App = (props) => {
+//     return (
+//         <GradientBackground>
+//             <View style={ styles.logoContainer }>
+//                 <Image source={ require('../../resources/logox2.png') } style={ styles.logo } />
+//             </View>
+//             <View style={ styles.loginContainer }>
+//                 <TouchableHighlight underlayColor='white' style={ styles.buttonContainer } onPress={ () => props.Actions.replace('tutorial') }>
+//                     <Text style={ styles.buttonText }>Login with Facebook</Text>
+//                 </TouchableHighlight>
+//                 <Text onPress={ () => props.Actions.replace('main')} style={ styles.smallText }>App name here</Text>
+//             </View>
+//         </GradientBackground>
+//     );
+// }
 
 const styles = StyleSheet.create({
     logoContainer: {
