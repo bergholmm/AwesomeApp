@@ -30,21 +30,6 @@ class App extends Component {
     }
 };
 
-// const App = (props) => {
-//     return (
-//         <GradientBackground>
-//             <View style={ styles.logoContainer }>
-//                 <Image source={ require('../../resources/logox2.png') } style={ styles.logo } />
-//             </View>
-//             <View style={ styles.loginContainer }>
-//                 <TouchableHighlight underlayColor='white' style={ styles.buttonContainer } onPress={ () => props.Actions.replace('tutorial') }>
-//                     <Text style={ styles.buttonText }>Login with Facebook</Text>
-//                 </TouchableHighlight>
-//                 <Text onPress={ () => props.Actions.replace('main')} style={ styles.smallText }>App name here</Text>
-//             </View>
-//         </GradientBackground>
-//     );
-// }
 
 const styles = StyleSheet.create({
     logoContainer: {
