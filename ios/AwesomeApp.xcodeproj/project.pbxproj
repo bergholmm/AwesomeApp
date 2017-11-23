@@ -13,6 +13,7 @@
 		00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302DC1ABCB9D200DB3ED1 /* libRCTNetwork.a */; };
 		00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302E41ABCB9EE00DB3ED1 /* libRCTVibration.a */; };
 		00E356F31AD99517003FC87E /* AwesomeAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* AwesomeAppTests.m */; };
+		043B6B891FC6CA2F003D9DBC /* libRCTCamera.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 043B6B681FC6CA0C003D9DBC /* libRCTCamera.a */; };
 		048B2D2B1FBDF3FF00C8EDE6 /* AIRGoogleMapUrlTile.m in Sources */ = {isa = PBXBuildFile; fileRef = 048B2CD41FBDF3FF00C8EDE6 /* AIRGoogleMapUrlTile.m */; };
 		048B2D2C1FBDF3FF00C8EDE6 /* AIRGoogleMapPolygonManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 048B2CD71FBDF3FF00C8EDE6 /* AIRGoogleMapPolygonManager.m */; };
 		048B2D2D1FBDF3FF00C8EDE6 /* AIRGoogleMapMarker.m in Sources */ = {isa = PBXBuildFile; fileRef = 048B2CDA1FBDF3FF00C8EDE6 /* AIRGoogleMapMarker.m */; };
@@ -33,6 +34,7 @@
 		048B2D3C1FBDF3FF00C8EDE6 /* AIRGoogleMapPolygon.m in Sources */ = {isa = PBXBuildFile; fileRef = 048B2CF61FBDF3FF00C8EDE6 /* AIRGoogleMapPolygon.m */; };
 		048B2D3D1FBDF3FF00C8EDE6 /* AIRGMSMarker.m in Sources */ = {isa = PBXBuildFile; fileRef = 048B2CF71FBDF3FF00C8EDE6 /* AIRGMSMarker.m */; };
 		04A258FE1FBEE426008E3DE2 /* libSplashScreen.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A258FD1FBEE3EE008E3DE2 /* libSplashScreen.a */; };
+		04F839661FC4700B0013854F /* libRCTCameraRoll.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04F839461FC46FDB0013854F /* libRCTCameraRoll.a */; };
 		133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C398B91ACF4ADC00677621 /* libRCTLinking.a */; };
 		139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139105C11AF99BAD00B5F7CC /* libRCTSettings.a */; };
 		139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139FDEF41B06529B00C62182 /* libRCTWebSocket.a */; };
@@ -103,6 +105,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
 			remoteInfo = AwesomeApp;
+		};
+		043B6B671FC6CA0C003D9DBC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 043B6B5B1FC6CA0C003D9DBC /* RCTCamera.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4107012F1ACB723B00C6AA39;
+			remoteInfo = RCTCamera;
 		};
 		0475B1421FBDF013006711A9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -194,6 +203,13 @@
 			proxyType = 2;
 			remoteGlobalIDString = 3D7682761D8E76B80014119E;
 			remoteInfo = SplashScreen;
+		};
+		04F839451FC46FDB0013854F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04F839391FC46FDB0013854F /* RCTCameraRoll.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 58B5115D1A9E6B3D00147676;
+			remoteInfo = RCTCameraRoll;
 		};
 		139105C01AF99BAD00B5F7CC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -361,6 +377,7 @@
 		00E356EE1AD99517003FC87E /* AwesomeAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AwesomeAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* AwesomeAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AwesomeAppTests.m; sourceTree = "<group>"; };
+		043B6B5B1FC6CA0C003D9DBC /* RCTCamera.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTCamera.xcodeproj; path = "../node_modules/react-native-camera/ios/RCTCamera.xcodeproj"; sourceTree = "<group>"; };
 		048B2CD31FBDF3FF00C8EDE6 /* AIRGoogleMapPolyline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIRGoogleMapPolyline.h; sourceTree = "<group>"; };
 		048B2CD41FBDF3FF00C8EDE6 /* AIRGoogleMapUrlTile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIRGoogleMapUrlTile.m; sourceTree = "<group>"; };
 		048B2CD51FBDF3FF00C8EDE6 /* AIRGoogleMapMarkerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIRGoogleMapMarkerManager.h; sourceTree = "<group>"; };
@@ -400,6 +417,7 @@
 		048B2CF71FBDF3FF00C8EDE6 /* AIRGMSMarker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIRGMSMarker.m; sourceTree = "<group>"; };
 		048B2CF81FBDF3FF00C8EDE6 /* DummyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DummyView.h; sourceTree = "<group>"; };
 		04A258F81FBEE3ED008E3DE2 /* SplashScreen.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SplashScreen.xcodeproj; path = "../node_modules/react-native-splash-screen/ios/SplashScreen.xcodeproj"; sourceTree = "<group>"; };
+		04F839391FC46FDB0013854F /* RCTCameraRoll.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTCameraRoll.xcodeproj; path = "../node_modules/react-native/Libraries/CameraRoll/RCTCameraRoll.xcodeproj"; sourceTree = "<group>"; };
 		139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTSettings.xcodeproj; path = "../node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj"; sourceTree = "<group>"; };
 		139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTWebSocket.xcodeproj; path = "../node_modules/react-native/Libraries/WebSocket/RCTWebSocket.xcodeproj"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* AwesomeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AwesomeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -437,6 +455,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				043B6B891FC6CA2F003D9DBC /* libRCTCamera.a in Frameworks */,
+				04F839661FC4700B0013854F /* libRCTCameraRoll.a in Frameworks */,
 				04A258FE1FBEE426008E3DE2 /* libSplashScreen.a in Frameworks */,
 				ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */,
 				5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */,
@@ -541,6 +561,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		043B6B5C1FC6CA0C003D9DBC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				043B6B681FC6CA0C003D9DBC /* libRCTCamera.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		0475B13C1FBDF00F006711A9 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
@@ -617,6 +645,14 @@
 			isa = PBXGroup;
 			children = (
 				04A258FD1FBEE3EE008E3DE2 /* libSplashScreen.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		04F8393A1FC46FDB0013854F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				04F839461FC46FDB0013854F /* libRCTCameraRoll.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -705,6 +741,8 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				043B6B5B1FC6CA0C003D9DBC /* RCTCamera.xcodeproj */,
+				04F839391FC46FDB0013854F /* RCTCameraRoll.xcodeproj */,
 				04A258F81FBEE3ED008E3DE2 /* SplashScreen.xcodeproj */,
 				5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */,
 				146833FF1AC3E56700842450 /* React.xcodeproj */,
@@ -918,6 +956,14 @@
 					ProjectRef = ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */;
 				},
 				{
+					ProductGroup = 043B6B5C1FC6CA0C003D9DBC /* Products */;
+					ProjectRef = 043B6B5B1FC6CA0C003D9DBC /* RCTCamera.xcodeproj */;
+				},
+				{
+					ProductGroup = 04F8393A1FC46FDB0013854F /* Products */;
+					ProjectRef = 04F839391FC46FDB0013854F /* RCTCameraRoll.xcodeproj */;
+				},
+				{
 					ProductGroup = 00C302B61ABCB90400DB3ED1 /* Products */;
 					ProjectRef = 00C302B51ABCB90400DB3ED1 /* RCTGeolocation.xcodeproj */;
 				},
@@ -1002,6 +1048,13 @@
 			fileType = archive.ar;
 			path = libRCTVibration.a;
 			remoteRef = 00C302E31ABCB9EE00DB3ED1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		043B6B681FC6CA0C003D9DBC /* libRCTCamera.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTCamera.a;
+			remoteRef = 043B6B671FC6CA0C003D9DBC /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		0475B1431FBDF013006711A9 /* libRCTBlob-tvOS.a */ = {
@@ -1093,6 +1146,13 @@
 			fileType = archive.ar;
 			path = libSplashScreen.a;
 			remoteRef = 04A258FC1FBEE3EE008E3DE2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		04F839461FC46FDB0013854F /* libRCTCameraRoll.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTCameraRoll.a;
+			remoteRef = 04F839451FC46FDB0013854F /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		139105C11AF99BAD00B5F7CC /* libRCTSettings.a */ = {
@@ -1506,8 +1566,11 @@
 					"$(SRCROOT)/../node_modules/react-native-maps/ios/AirMaps",
 					"/**",
 					"$(SRCROOT)/../node_modules/react-native-splash-screen/ios/**",
+					"$(SRCROOT)/../../../React/**",
+					"$(SRCROOT)/../../react-native/React/**",
 				);
 				INFOPLIST_FILE = AwesomeApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -1537,8 +1600,11 @@
 					"$(SRCROOT)/../node_modules/react-native-maps/ios/AirMaps",
 					"/**",
 					"$(SRCROOT)/../node_modules/react-native-splash-screen/ios/**",
+					"$(SRCROOT)/../../../React/**",
+					"$(SRCROOT)/../../react-native/React/**",
 				);
 				INFOPLIST_FILE = AwesomeApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
