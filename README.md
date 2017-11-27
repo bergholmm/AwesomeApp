@@ -6,6 +6,7 @@ Cross platform app for a course project
 - Lastest react-native-cli
 - Lastest yarn
 - Lastest Android Studio (Setup: https://facebook.github.io/react-native/docs/getting-started.html)
+- BuildToolsVersion of 25.0.2+ for android simulator
 - Lastest xCode (Only macOS)
 
 ## Installation
