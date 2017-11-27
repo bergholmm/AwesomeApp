@@ -3426,6 +3426,10 @@ react-native-maps@^0.17.1:
   version "0.17.1"
   resolved "https://registry.yarnpkg.com/react-native-maps/-/react-native-maps-0.17.1.tgz#ab2236341fd984dac8864202ae55331bc262f60c"
 
+react-native-permissions@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/react-native-permissions/-/react-native-permissions-1.0.2.tgz#b56af9df876d47386b91ae90c39f5bb4dd1b81c4"
+
 react-native-photo-grid-frame@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/react-native-photo-grid-frame/-/react-native-photo-grid-frame-2.0.1.tgz#8022dce124aa1d929cf8ac94727625a795febc0f"
@@ -3629,6 +3633,10 @@ redux-logger@^3.0.6:
   resolved "https://registry.yarnpkg.com/redux-logger/-/redux-logger-3.0.6.tgz#f7555966f3098f3c88604c449cf0baf5778274bf"
   dependencies:
     deep-diff "^0.3.5"
+
+redux-thunk@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/redux-thunk/-/redux-thunk-2.2.0.tgz#e615a16e16b47a19a515766133d1e3e99b7852e5"
 
 redux@^3.7.2:
   version "3.7.2"
