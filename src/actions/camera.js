@@ -87,7 +87,7 @@ export const getLocationPermission = () => {
     };
 }
 
-export const checkAndGetCameraAndLocationPermisson = () => {
+export const checkAndGetCameraAndLocationPermission = () => {
     return (dispatch, getState) => {
         Permissions.checkMultiple(['camera', 'location']).then(response => {
             const { camera, location } = response;

@@ -194,12 +194,12 @@ const styles = StyleSheet.create({
         height: 25,
     },
     closeButton: {
-        width: 19,
-        height: 19,
+        width: 15,
+        height: 15,
     },
     doneButton: {
-        width: 31,
-        height: 22,
+        width: 21,
+        height: 15,
     },
 });
 

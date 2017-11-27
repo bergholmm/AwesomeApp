@@ -11,12 +11,16 @@ import {
 
 class App extends Component {
     componentDidMount() {
-        const { cameraPermission, locationPermission } = this.props;
+        const { cameraPermission, locationPermission, photosPermission } = this.props;
 
         SplashScreen.hide();
 
         if ( cameraPermission !== 'authorized' || locationPermission !== 'authorized') {
-            this.props.checkAndGetCameraAndLocationPermisson();
+            this.props.checkAndGetCameraAndLocationPermission();
+        }
+
+        if ( photosPermission !== 'authorized' ) {
+            this.props.checkAndGetPhotosPermission();
         }
     }
     render() {
