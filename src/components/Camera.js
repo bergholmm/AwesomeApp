@@ -24,6 +24,11 @@ const getFlashIcon = (flashMode) => {
     }
 };
 
+const goToEditImage = (props) => {
+    props.setImage({ uri: props.photo.path, width, height });
+    props.Actions.push('editImage');
+}
+
 const CameraComponent = (props) => {
     const { camera, cameraPermission, locationPermission, photo } = props;
     const { aspect, captureTarget, type, flashMode } = props.settings;
@@ -48,16 +53,16 @@ const CameraComponent = (props) => {
     }
     else if (photo !== null) {
         content = (
-            <View>
-                <View style={ styles.topButtons }>
+            <View style={{ flex: 1 }}>
                 <Image style={ styles.preview } source={{ uri: photo.path }}/>
+                <View style={ styles.topContainer }>
                     <View style={ styles.leftButton }>
-                        <TouchableHighlight underlayColor='transparent' style={ styles.closeContainer } onPress={ props.clear }>
+                        <TouchableHighlight underlayColor='transparent' style={ styles.topButtonContainer } onPress={ props.clear }>
                             <Image source={ require('../../resources/xColored.png') } style={ styles.closeButton } />
                         </TouchableHighlight>
                     </View>
                     <View style={ styles.rightButton }>
-                        <TouchableHighlight underlayColor='transparent' style={ styles.closeContainer } onPress={ () => props.Actions.push('editImage') }>
+                        <TouchableHighlight underlayColor='transparent' style={ styles.topButtonContainer } onPress={ () => goToEditImage(props) }>
                             <Image source={ require('../../resources/done.png') } style={ styles.doneButton } />
                         </TouchableHighlight>
                     </View>
@@ -78,7 +83,7 @@ const CameraComponent = (props) => {
                 defaultTouchToFocus
                 mirrorImage={ false }
             >
-                <View style={ styles.upperContainer }>
+                <View style={ styles.topContainer }>
                     <TouchableHighlight underlayColor='transparent' style={ styles.closeContainer } onPress={ props.Actions.pop }>
                         <Image source={ require('../../resources/xColored.png') } style={ styles.closeButton } />
                     </TouchableHighlight>
@@ -109,12 +114,17 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
     },
-    upperContainer: {
-        flex: 1,
+    topButtonContainer: {
+        width: 39,
+        height: 39,
+        marginTop: 30,
+        marginLeft: 25,
     },
-    topButtons: {
-        flex: 0.22,
-        width: '100%',
+    topContainer: {
+        position: 'absolute',
+        height: 100,
+        width: width,
+        top: 0,
         flexDirection: 'row',
     },
     leftButton: {
@@ -150,7 +160,7 @@ const styles = StyleSheet.create({
     },
     buttonsContainer: {
         flex: 0.2,
-        width: '100%',
+        width: width,
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'space-around',

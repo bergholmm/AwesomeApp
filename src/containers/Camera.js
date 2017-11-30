@@ -1,6 +1,7 @@
 import Camera from  '../components/Camera';
 import { connect } from 'react-redux';
 import { Actions } from 'react-native-router-flux';
+import { setImageFromCamera } from '../actions/image';
 import {
     getLocation,
     switchFlash,
@@ -27,6 +28,7 @@ const mapDispatchToProps = (dispatch) => ({
     takePicture: () => dispatch(takePicture()),
     clear: () => dispatch(clearCurrentPhoto()),
     setCamera: (cam) => dispatch(setCamera(cam)),
+    setImage: (image) => dispatch(setImageFromCamera(image)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Camera);

@@ -52,7 +52,7 @@ export const checkAndGetPhotosPermission = () => {
     };
 };
 
-export const getPhotos = ( numPhotos = 18) => {
+export const getPhotos = ( numPhotos = 50) => {
     return(dispatch, getState) => {
         const { pageInfo } = getState().cameraRoll;
         if ( pageInfo === null ) {

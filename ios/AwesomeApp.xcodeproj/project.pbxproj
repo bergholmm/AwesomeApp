@@ -13,7 +13,9 @@
 		00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302DC1ABCB9D200DB3ED1 /* libRCTNetwork.a */; };
 		00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302E41ABCB9EE00DB3ED1 /* libRCTVibration.a */; };
 		00E356F31AD99517003FC87E /* AwesomeAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* AwesomeAppTests.m */; };
+		04035B471FD080DF0093F674 /* libRNBlur.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04035B421FD080C50093F674 /* libRNBlur.a */; };
 		043B6B891FC6CA2F003D9DBC /* libRCTCamera.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 043B6B681FC6CA0C003D9DBC /* libRCTCamera.a */; };
+		047B44721FCEFC3A00BB20C4 /* libRNGL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 047B44701FCEFC2200BB20C4 /* libRNGL.a */; };
 		048B2D2B1FBDF3FF00C8EDE6 /* AIRGoogleMapUrlTile.m in Sources */ = {isa = PBXBuildFile; fileRef = 048B2CD41FBDF3FF00C8EDE6 /* AIRGoogleMapUrlTile.m */; };
 		048B2D2C1FBDF3FF00C8EDE6 /* AIRGoogleMapPolygonManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 048B2CD71FBDF3FF00C8EDE6 /* AIRGoogleMapPolygonManager.m */; };
 		048B2D2D1FBDF3FF00C8EDE6 /* AIRGoogleMapMarker.m in Sources */ = {isa = PBXBuildFile; fileRef = 048B2CDA1FBDF3FF00C8EDE6 /* AIRGoogleMapMarker.m */; };
@@ -107,6 +109,20 @@
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
 			remoteInfo = AwesomeApp;
 		};
+		04035B411FD080C50093F674 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04035B131FD080C50093F674 /* RNBlur.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A68BD7BC1BC31318005F02DF;
+			remoteInfo = RNBlur;
+		};
+		04035B431FD080C50093F674 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04035B131FD080C50093F674 /* RNBlur.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 64D1BD361EEFE88700F3F219;
+			remoteInfo = "RNBlur-tvOS";
+		};
 		043B6B671FC6CA0C003D9DBC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 043B6B5B1FC6CA0C003D9DBC /* RCTCamera.xcodeproj */;
@@ -155,6 +171,13 @@
 			proxyType = 2;
 			remoteGlobalIDString = 64AA15081EF7F30100718508;
 			remoteInfo = "BVLinearGradient-tvOS";
+		};
+		047B446F1FCEFC2200BB20C4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 047B44421FCEFC2200BB20C4 /* RNGL.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4107012F1ACB723B00C6AA39;
+			remoteInfo = RNGL;
 		};
 		048B2D1F1FBDF3FF00C8EDE6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -385,7 +408,9 @@
 		00E356EE1AD99517003FC87E /* AwesomeAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AwesomeAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* AwesomeAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AwesomeAppTests.m; sourceTree = "<group>"; };
+		04035B131FD080C50093F674 /* RNBlur.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNBlur.xcodeproj; path = "../node_modules/react-native-blur/ios/RNBlur.xcodeproj"; sourceTree = "<group>"; };
 		043B6B5B1FC6CA0C003D9DBC /* RCTCamera.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTCamera.xcodeproj; path = "../node_modules/react-native-camera/ios/RCTCamera.xcodeproj"; sourceTree = "<group>"; };
+		047B44421FCEFC2200BB20C4 /* RNGL.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNGL.xcodeproj; path = "../node_modules/gl-react-native/ios/RNGL.xcodeproj"; sourceTree = "<group>"; };
 		048B2CD31FBDF3FF00C8EDE6 /* AIRGoogleMapPolyline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIRGoogleMapPolyline.h; sourceTree = "<group>"; };
 		048B2CD41FBDF3FF00C8EDE6 /* AIRGoogleMapUrlTile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AIRGoogleMapUrlTile.m; sourceTree = "<group>"; };
 		048B2CD51FBDF3FF00C8EDE6 /* AIRGoogleMapMarkerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AIRGoogleMapMarkerManager.h; sourceTree = "<group>"; };
@@ -464,6 +489,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04035B471FD080DF0093F674 /* libRNBlur.a in Frameworks */,
+				047B44721FCEFC3A00BB20C4 /* libRNGL.a in Frameworks */,
 				04ED509F1FCB657600D070C0 /* libReactNativePermissions.a in Frameworks */,
 				043B6B891FC6CA2F003D9DBC /* libRCTCamera.a in Frameworks */,
 				04F839661FC4700B0013854F /* libRCTCameraRoll.a in Frameworks */,
@@ -571,6 +598,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		04035B141FD080C50093F674 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				04035B421FD080C50093F674 /* libRNBlur.a */,
+				04035B441FD080C50093F674 /* libRNBlur.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		043B6B5C1FC6CA0C003D9DBC /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -601,6 +637,14 @@
 			isa = PBXGroup;
 			children = (
 				0475B15E1FBDF013006711A9 /* libAirMaps.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		047B44431FCEFC2200BB20C4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				047B44701FCEFC2200BB20C4 /* libRNGL.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -759,6 +803,8 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				04035B131FD080C50093F674 /* RNBlur.xcodeproj */,
+				047B44421FCEFC2200BB20C4 /* RNGL.xcodeproj */,
 				04ED50701FCB655900D070C0 /* ReactNativePermissions.xcodeproj */,
 				043B6B5B1FC6CA0C003D9DBC /* RCTCamera.xcodeproj */,
 				04F839391FC46FDB0013854F /* RCTCameraRoll.xcodeproj */,
@@ -1023,6 +1069,14 @@
 					ProjectRef = 04ED50701FCB655900D070C0 /* ReactNativePermissions.xcodeproj */;
 				},
 				{
+					ProductGroup = 04035B141FD080C50093F674 /* Products */;
+					ProjectRef = 04035B131FD080C50093F674 /* RNBlur.xcodeproj */;
+				},
+				{
+					ProductGroup = 047B44431FCEFC2200BB20C4 /* Products */;
+					ProjectRef = 047B44421FCEFC2200BB20C4 /* RNGL.xcodeproj */;
+				},
+				{
 					ProductGroup = 04A258F91FBEE3ED008E3DE2 /* Products */;
 					ProjectRef = 04A258F81FBEE3ED008E3DE2 /* SplashScreen.xcodeproj */;
 				},
@@ -1073,6 +1127,20 @@
 			remoteRef = 00C302E31ABCB9EE00DB3ED1 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		04035B421FD080C50093F674 /* libRNBlur.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNBlur.a;
+			remoteRef = 04035B411FD080C50093F674 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		04035B441FD080C50093F674 /* libRNBlur.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNBlur.a;
+			remoteRef = 04035B431FD080C50093F674 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		043B6B681FC6CA0C003D9DBC /* libRCTCamera.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -1120,6 +1188,13 @@
 			fileType = archive.ar;
 			path = libBVLinearGradient.a;
 			remoteRef = 0475B1631FBDF013006711A9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		047B44701FCEFC2200BB20C4 /* libRNGL.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNGL.a;
+			remoteRef = 047B446F1FCEFC2200BB20C4 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		048B2D201FBDF3FF00C8EDE6 /* libthird-party.a */ = {
