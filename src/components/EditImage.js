@@ -91,6 +91,8 @@ class EditImage extends Component {
     captureImage() {
         this.refs.surface.captureFrame()
         .then((image) => this.props.saveImage({ url: image, location: this.props.location }));
+
+        this.props.Actions.pop();
     }
     render() {
         const { selectedEffect, effects, viewRef } = this.state;
