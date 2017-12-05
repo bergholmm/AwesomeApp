@@ -110,8 +110,8 @@ class CameraRoll extends Component {
         const { selected } = this.state;
 
         const nextButton = ((selected === -1) ? <View></View> : (
-            <TouchableHighlight underlayColor='transparent' onPress={ this.nextAndSetImage.bind(this) }  >
-                <Text style={ styles.backText }>Next</Text>
+            <TouchableHighlight style={ styles.topButtonContainer } underlayColor='transparent' onPress={ this.nextAndSetImage.bind(this) }  >
+                <Text style={ styles.buttonText }>Next</Text>
             </TouchableHighlight>
         ));
 
@@ -142,8 +142,8 @@ class CameraRoll extends Component {
             <GradientBackground>
                 <View style= { styles.header }>
                     <View style={ styles.leftButton }>
-                        <TouchableHighlight underlayColor='transparent' style={ styles.closeContainer } onPress={ this.props.Actions.pop }>
-                            <Image source={ require('../../resources/xWhite.png') } style={ styles.closeButton } />
+                        <TouchableHighlight underlayColor='transparent' style={ styles.topButtonContainer } onPress={ this.props.Actions.pop }>
+                            <Text style={ styles.buttonText }>Back</Text>
                         </TouchableHighlight>
                     </View>
                     <View style={ styles.rightButton }>
@@ -182,7 +182,7 @@ const styles = StyleSheet.create({
         textAlign: 'center',
     },
     header: {
-        height: 75,
+        height: 100,
         width: width,
         flexDirection: 'row',
     },
@@ -194,22 +194,25 @@ const styles = StyleSheet.create({
     },
     leftButton: {
         flex: 0.5,
-        justifyContent: 'center',
     },
     rightButton: {
         flex: 0.5,
-        justifyContent: 'center',
         alignItems: 'flex-end',
+        marginRight: 15,
     },
-    closeContainer: {
-        marginTop: 25,
-        marginLeft: 25,
-        width: 39,
-        height: 39,
+    topButtonContainer: {
+        marginTop: 30,
     },
     closeButton: {
         width: 15,
         height: 15,
+    },
+    buttonText: {
+        padding: 10,
+        paddingLeft: 20,
+        fontSize: 16,
+        fontWeight: '100',
+        color: 'white',
     },
 });
 

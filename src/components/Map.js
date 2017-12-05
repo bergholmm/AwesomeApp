@@ -11,17 +11,8 @@ import {
 const { width, height } = Dimensions.get('window')
 
 const Map = (props) => {
-    let { photos } = props;
-
-    let location = {
-        latitude: 37.78825,
-        longitude: -122.4324,
-    };
-
-    if ( Object.keys(props.location).length === 0 ) {
-        location = props.location;
-    }
-
+    let { photos = [] } = props;
+    let position = Object.is(props.position, null) ? { latitude: 37.78825, longitude: -122.4324 } : props.position;
     const photoMarkers = photos.filter( (photo) => photo.location.latitude !== null );
 
     return (
@@ -30,8 +21,8 @@ const Map = (props) => {
                 <MapView
                     style={ styles.map }
                     initialRegion={{
-                        latitude: location.latitude,
-                        longitude: location.longitude,
+                        latitude: position.latitude,
+                        longitude: position.longitude,
                         latitudeDelta: 1.1143,
                         longitudeDelta: 1.1134,
                     }}

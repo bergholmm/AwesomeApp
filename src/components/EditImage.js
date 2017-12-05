@@ -253,7 +253,6 @@ const styles = StyleSheet.create({
     },
     topButtonContainer: {
         marginTop: 30,
-        // marginLeft: 25,
     },
     topContainer: {
         position: 'absolute',
