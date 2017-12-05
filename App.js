@@ -30,9 +30,9 @@ export default App = () => (
                     <Scene hideNavBar key="tutorial" component={Tutorial} title="Tutorial" gestureEnabled={false} panHandlers={null} />
                     <Scene hideNavBar key="editImage" component={EditImage} title="EditImage"/>
                     <Scene hideNavBar key='main' component={mainWrapper} title='Main' gestureEnabled={false} panHandlers={null} />
+                    <Scene hideNavBar key="cameraRoll" component={CameraRoll} title="CameraRoll" modal={true}/>
+                    <Scene hideNavBar key="camera" component={Camera} title="Camera" modal={true}/>
                 </Scene>
-                <Scene hideNavBar key="cameraRoll" component={CameraRoll} title="CameraRoll" modal={true}/>
-                <Scene hideNavBar key="camera" component={Camera} title="Camera" modal={true}/>
             </Modal>
         </RouterWithRedux>
     </Provider>

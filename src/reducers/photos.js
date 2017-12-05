@@ -2,10 +2,8 @@ import {
     ADD_IMAGE,
 } from '../actions/photos';
 
-import { photos as p } from '../utils';
-
 const initialState = {
-    photos: p,
+    photos: [],
 };
 
 const photos = (state = initialState, action = {}) => {
