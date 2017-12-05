@@ -1,0 +1,21 @@
+module.exports = {
+    F1977: require('./F1977'),
+    Amaro: require('./Amaro'),
+    Brannan: require('./Brannan'),
+    Earlybird: require('./Earlybird'),
+    Hefe: require('./Hefe'),
+    Hudson: require('./Hudson'),
+    Inkwell: require('./Inkwell'),
+    Lokofi: require('./Lokofi'),
+    LordKelvin: require('./LordKelvin'),
+    Nashville: require('./Nashville'),
+    Normal: require('./Normal'),
+    Rise: require('./Rise'),
+    Sierra: require( './Sierra'),
+    Sutro: require('./Sutro'),
+    Toaster: require('./Toaster'),
+    Valencia: require('./Valencia'),
+    Walden: require('./Walden'),
+    XproII: require('./XproII'),
+};
+
