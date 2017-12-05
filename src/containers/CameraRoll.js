@@ -1,6 +1,7 @@
 import CameraRoll from  '../components/CameraRoll';
 import { connect } from 'react-redux';
 import { Actions } from 'react-native-router-flux';
+import { setImage } from '../actions/image';
 import {
     getPhotos,
     clear,
@@ -15,6 +16,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = (dispatch) => ({
     getPhotos: () => dispatch(getPhotos()),
     clear: () => dispatch(clear()),
+    setImage: (image, location) => dispatch(setImage(image, location)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(CameraRoll);

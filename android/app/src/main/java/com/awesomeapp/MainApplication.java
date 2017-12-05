@@ -3,6 +3,9 @@ package com.awesomeapp;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.rnfs.RNFSPackage;
+import com.cmcewen.blurview.BlurViewPackage;
+import com.projectseptember.RNGL.RNGLPackage;
 import com.lwansbrough.RCTCamera.RCTCameraPackage;
 import org.devio.rn.splashscreen.SplashScreenReactPackage;
 import com.airbnb.android.react.maps.MapsPackage;
@@ -27,9 +30,12 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new RNFSPackage(),
+            new BlurViewPackage(),
             new RCTCameraPackage(),
             new SplashScreenReactPackage(),
             new MapsPackage(),
+            new RNGLPackage(),
             new LinearGradientPackage()
       );
     }

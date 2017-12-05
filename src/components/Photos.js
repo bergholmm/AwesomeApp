@@ -1,6 +1,5 @@
 import React from 'react';
 import GradientBackground from './GradientBackground'
-import { photos } from '../utils';
 import { PhotoGrid } from 'react-native-photo-grid-frame';
 import {
     StyleSheet,
@@ -26,7 +25,7 @@ const Photos = (props) => (
                 <Text style={ styles.name }>Marcus Bergholm</Text>
                 <Text style={ styles.location }>Stockholm, Sweden</Text>
             </View>
-            <PhotoGrid PhotosList={photos} />
+            <PhotoGrid PhotosList={ props.photos } />
         </ScrollView>
     </GradientBackground>
 );

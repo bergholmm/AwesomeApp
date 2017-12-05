@@ -92,15 +92,25 @@ class CameraRoll extends Component {
 
         return newList;
     }
+    nextAndSetImage() {
+        const { photos, drafts } = this.props;
+        const draftsLen = drafts.length;
+        const index = this.state.selected - draftsLen;
+
+        if ( index >= draftsLen ) {
+            this.props.setImage(photos[index].node.image, photos[index].node.location);
+        } else {
+            this.props.setImage(drafts[index].node.image, drafts[index].node.location);
+        }
+
+        this.props.Actions.push('editImage');
+    }
     render() {
         const { photos, drafts } = this.props;
         const { selected } = this.state;
 
-        if ( selected !== -1 ) {
-
-        }
         const nextButton = ((selected === -1) ? <View></View> : (
-            <TouchableHighlight underlayColor='transparent' onPress={ () => this.props.Actions.push('editImage') }>
+            <TouchableHighlight underlayColor='transparent' onPress={ this.nextAndSetImage.bind(this) }  >
                 <Text style={ styles.backText }>Next</Text>
             </TouchableHighlight>
         ));
@@ -117,6 +127,17 @@ class CameraRoll extends Component {
         const pp = this.sliceList(p);
         const dd = this.sliceList(d);
 
+        let sections = [
+            {data: dd, title: 'Drafts' },
+            {data: pp, title: 'All photos' },
+        ];
+
+        if ( drafts.length === 0 ) {
+            sections = [
+                {data: pp, title: 'All photos' },
+            ];
+        }
+
         return (
             <GradientBackground>
                 <View style= { styles.header }>
@@ -132,10 +153,7 @@ class CameraRoll extends Component {
                 <SectionList
                     renderItem={ this.renderItem.bind(this) }
                     renderSectionHeader={ this.renderSectionHeader.bind(this) }
-                    sections={[
-                        {data: dd, title: 'Drafts' },
-                        {data: pp, title: 'All photos' },
-                    ]}
+                    sections={ sections }
                     keyExtractor={ (item, index) => index }
 
                 />
@@ -165,6 +183,7 @@ const styles = StyleSheet.create({
     },
     header: {
         height: 75,
+        width: width,
         flexDirection: 'row',
     },
     scrollView: {
@@ -174,17 +193,17 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     leftButton: {
-        flex: 1,
+        flex: 0.5,
         justifyContent: 'center',
     },
     rightButton: {
-        flex: 1,
+        flex: 0.5,
         justifyContent: 'center',
         alignItems: 'flex-end',
     },
     closeContainer: {
         marginTop: 25,
-        marginLeft: 20,
+        marginLeft: 25,
         width: 39,
         height: 39,
     },
