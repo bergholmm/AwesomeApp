@@ -8,8 +8,11 @@ import {
     View,
     Image,
     Animated,
+    Dimensions,
     TouchableHighlight,
 } from 'react-native';
+
+const { width, height } = Dimensions.get('window')
 
 
 class Tutorial extends Component {
@@ -35,7 +38,6 @@ class Tutorial extends Component {
         return (
             <GradientBackground>
                 <Swiper
-                    style={ styles.wapper }
                     showsButtons={ true }
                     loop={ false }
                     activeDotColor='white'
@@ -84,7 +86,7 @@ const styles = StyleSheet.create({
         width: 212,
         height: 124,
         position: 'absolute',
-        left: '19%',
+        left: width/2 - 116,
         top: '77%',
     },
     slide: {
@@ -105,7 +107,7 @@ const styles = StyleSheet.create({
         height: 124,
         position: 'absolute',
         top: '77%',
-        left: '22%',
+        left: width/2 - 106,
     },
     nextButton: {
         width: 212,
