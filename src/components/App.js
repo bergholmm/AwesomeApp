@@ -11,7 +11,7 @@ import {
 
 class App extends Component {
     componentDidMount() {
-        const { cameraPermission, locationPermission, photosPermission } = this.props;
+        const { cameraPermission, locationPermission, photosPermission, getCurrentPosition } = this.props;
 
         SplashScreen.hide();
 
@@ -22,6 +22,8 @@ class App extends Component {
         if ( photosPermission !== 'authorized' ) {
             this.props.checkAndGetPhotosPermission();
         }
+
+        getCurrentPosition();
     }
     render() {
         return (

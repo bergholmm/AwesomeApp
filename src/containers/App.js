@@ -1,7 +1,7 @@
 import App from '../components/App';
 import { connect } from 'react-redux';
 import { Actions } from 'react-native-router-flux';
-import { checkAndGetCameraAndLocationPermission } from '../actions/camera';
+import { checkAndGetCameraAndLocationPermission, getLocation } from '../actions/camera';
 import { checkAndGetPhotosPermission } from '../actions/cameraRoll';
 
 const mapStateToProps = state => ({
@@ -14,6 +14,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = (dispatch) => ({
     checkAndGetCameraAndLocationPermission: () => dispatch(checkAndGetCameraAndLocationPermission()),
     checkAndGetPhotosPermission: () => dispatch(checkAndGetPhotosPermission()),
+    getCurrentPosition: () => dispatch(getLocation()),
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

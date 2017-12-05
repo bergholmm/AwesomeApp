@@ -1,23 +1,56 @@
 import React from 'react';
 import GradientBackground from './GradientBackground'
-import MapView, { PROVIDER_GOOGLE }from 'react-native-maps';
-import { StyleSheet, View } from 'react-native';
+import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
+import {
+    StyleSheet,
+    View,
+    Image,
+    Dimensions,
+} from 'react-native';
 
-const Map = (props) => (
-    <GradientBackground>
-        <View style={ styles.container }>
-            <MapView
-                style={ styles.map }
-                initialRegion={{
-                    latitude: 37.78825,
-                    longitude: -122.4324,
-                    latitudeDelta: 0.0922,
-                    longitudeDelta: 0.0421,
-                }}
-            />
-        </View>
-    </GradientBackground>
-);
+const { width, height } = Dimensions.get('window')
+
+const Map = (props) => {
+    let { photos } = props;
+
+    let location = {
+        latitude: 37.78825,
+        longitude: -122.4324,
+    };
+
+    if ( Object.keys(props.location).length === 0 ) {
+        location = props.location;
+    }
+
+    const photoMarkers = photos.filter( (photo) => photo.location.latitude !== null );
+
+    return (
+        <GradientBackground>
+            <View style={ styles.container }>
+                <MapView
+                    style={ styles.map }
+                    initialRegion={{
+                        latitude: location.latitude,
+                        longitude: location.longitude,
+                        latitudeDelta: 1.1143,
+                        longitudeDelta: 1.1134,
+                    }}
+                >
+                {
+                    photoMarkers.map( (photo, i) =>
+                        <MapView.Marker
+                            key={ i }
+                            coordinate={ photo.location }
+                        >
+                            <Image source={{ uri: photo.url }} style={ styles.pin } />
+                        </MapView.Marker>
+                    )
+                }
+                </MapView>
+            </View>
+        </GradientBackground>
+    );
+};
 
 const styles = StyleSheet.create({
     container: {
@@ -26,9 +59,14 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     map: {
-        width: '100%',
-        height: '100%',
-    }
+        width: width,
+        height: height,
+    },
+    pin: {
+        width: 30,
+        height: 30,
+        borderRadius: 15,
+    },
 });
 
 export default Map;

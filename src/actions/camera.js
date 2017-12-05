@@ -114,7 +114,7 @@ export const getLocation = () => {
         if ( locationPermission === 'authorized' ) {
             navigator.geolocation.getCurrentPosition(
                 (position) => {
-                    dispatch(updateLocation(position));
+                    dispatch(updateLocation(position.coords));
                 },
                 (error) => {},
                 { enableHighAccuracy: true, timeout: 20000, maximumAge: 1000 },
