@@ -1,6 +1,5 @@
 import React, { Component }from 'react';
 import GradientBackground from './GradientBackground';
-import SplashScreen from 'react-native-splash-screen';
 import {
     View,
     Text,
@@ -10,10 +9,13 @@ import {
 } from 'react-native';
 
 class App extends Component {
+    constructor(props) {
+        super(props);
+        // props.resetState();
+        props.loadState();
+    }
     componentDidMount() {
         const { cameraPermission, locationPermission, photosPermission, getCurrentPosition } = this.props;
-
-        SplashScreen.hide();
 
         if ( cameraPermission !== 'authorized' || locationPermission !== 'authorized') {
             this.props.checkAndGetCameraAndLocationPermission();
@@ -32,10 +34,10 @@ class App extends Component {
                     <Image source={ require('../../resources/logox2.png') } style={ styles.logo } />
                 </View>
                 <View style={ styles.loginContainer }>
-                    <TouchableHighlight underlayColor='white' style={ styles.buttonContainer } onPress={ () => this.props.Actions.replace('tutorial') }>
+                    <TouchableHighlight underlayColor='white' style={ styles.buttonContainer } onPress={ () => this.props.loginAndSaveState('token') }>
                         <Text style={ styles.buttonText }>Login with Facebook</Text>
                     </TouchableHighlight>
-                    <Text onPress={ () => this.props.Actions.replace('main')} style={ styles.smallText }>App name here</Text>
+                    <Text onPress={ this.props.resetState } style={ styles.smallText }>App name here</Text>
                 </View>
             </GradientBackground>
         );

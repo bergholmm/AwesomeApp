@@ -5,6 +5,7 @@ import camera from './camera';
 import cameraRoll from './cameraRoll';
 import image from './image';
 import photos from './photos';
+import user from './user';
 
 const reducer = combineReducers({
     routes,
@@ -13,6 +14,7 @@ const reducer = combineReducers({
     cameraRoll,
     image,
     photos,
+    user,
 });
 
 export default reducer;

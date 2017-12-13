@@ -7,13 +7,24 @@ import {
     Text,
     View,
     ScrollView,
+    TouchableHighlight,
+    Dimensions,
 } from 'react-native';
+
+const { width, height } = Dimensions.get('window');
 
 const Photos = (props) => (
     <GradientBackground>
         <ScrollView style={ styles.container }>
-            <View style={ styles.logoContainer }>
-                <Image source={ require('../../resources/logox2.png') } style={ styles.logo } />
+            <View style={ styles.topContainer }>
+                <View style={ styles.logoutContainer }>
+                    <TouchableHighlight style={ styles.logoutButton } onPress={ () => props.logout() } underlayColor='transparent'>
+                        <Text style={ styles.logoutText }>Logout</Text>
+                    </TouchableHighlight>
+                </View>
+                <View style={ styles.logoContainer }>
+                    <Image source={ require('../../resources/logox2.png') } style={ styles.logo } />
+                </View>
             </View>
             <View style={ styles.profileContainer }>
                 <Image source={ require('../../resources/testProfilePicture.jpg') } style={ styles.profilePicture } />
@@ -34,14 +45,36 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
     },
+    topContainer: {
+        flexDirection: 'row',
+        width,
+        marginTop: 35,
+    },
+    logoutContainer: {
+        alignItems: 'center',
+        width: 81,
+    },
     logoContainer: {
         alignItems: 'center',
+        justifyContent: 'center',
+        flex: 1,
+        paddingRight: 81,
+    },
+    logoutButton: {
     },
     profileContainer: {
         justifyContent: 'flex-end',
         alignItems: 'center',
         height: 275,
         width: '100%',
+    },
+    logoutText: {
+        padding: 10,
+        paddingLeft: 20,
+        fontSize: 16,
+        fontWeight: '100',
+        color: 'white',
+        textAlign: 'center'
     },
     text: {
         alignSelf: 'center',
@@ -55,7 +88,6 @@ const styles = StyleSheet.create({
         width: 120,
     },
     logo: {
-        top: 35,
         height: 38,
         width: 38,
     },
