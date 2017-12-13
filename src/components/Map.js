@@ -12,8 +12,14 @@ const { width, height } = Dimensions.get('window')
 
 const Map = (props) => {
     let { photos = [] } = props;
-    let position = Object.is(props.position, null) ? { latitude: 37.78825, longitude: -122.4324 } : props.position;
-    const photoMarkers = photos.filter( (photo) => photo.location.latitude !== null );
+    const photoMarkers = photos.filter( (photo) => photo.location !== null || !Object.is(photo.location, null) );
+
+    let position = { latitude: 37.78825, longitude: -122.4324 };
+    if ( props.position !== null ) {
+        if (!(Object.keys(props.position).length === 0 && position.constructor === Object)) {
+            position = props.position;
+        }
+    }
 
     return (
         <GradientBackground>
@@ -51,7 +57,7 @@ const styles = StyleSheet.create({
     },
     map: {
         width: width,
-        height: height,
+        height: height - 60,
     },
     pin: {
         width: 30,
