@@ -27,25 +27,29 @@ const Tabbar = (props) => {
         );
     }
 
-    return (
-        <View style={styles.container}>
-            <LinearGradient
-                style={styles.container}
-                colors={['#FF7676', '#F54EA2']}
-                start={{ x: 0.0, y: 0.0 }}
-            >
-                <View style={styles.innerContainer}>
-                    <TouchableHighlight underlayColor='transparent' onPress={ () => props.changeTab(0) } style={ styles.buttonContainer }>
-                        <Image source={ require('../../resources/discoverx2.png') }style={styles.discover} />
-                    </TouchableHighlight>
-                    {addSpot}
-                    <TouchableHighlight underlayColor='transparent' onPress={ () => props.changeTab(2) } style={ styles.buttonContainer }>
-                        <Image source={ require('../../resources/mapx2.png') }style={styles.map} />
-                    </TouchableHighlight>
-                </View>
-            </LinearGradient>
-        </View>
-    );
+    if (props.hide) {
+        return <View></View>;
+    } else {
+        return (
+            <View style={styles.container}>
+                <LinearGradient
+                    style={styles.container}
+                    colors={['#FF7676', '#F54EA2']}
+                    start={{ x: 0.0, y: 0.0 }}
+                >
+                    <View style={styles.innerContainer}>
+                        <TouchableHighlight underlayColor='transparent' onPress={ () => props.changeTab(0) } style={ styles.buttonContainer }>
+                            <Image source={ require('../../resources/discoverx2.png') }style={styles.discover} />
+                        </TouchableHighlight>
+                        {addSpot}
+                        <TouchableHighlight underlayColor='transparent' onPress={ () => props.changeTab(2) } style={ styles.buttonContainer }>
+                            <Image source={ require('../../resources/mapx2.png') }style={styles.map} />
+                        </TouchableHighlight>
+                    </View>
+                </LinearGradient>
+            </View>
+        );
+    }
 };
 
 const styles = StyleSheet.create({

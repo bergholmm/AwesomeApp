@@ -2,19 +2,17 @@ import { combineReducers } from 'redux';
 import routes from './routes';
 import tabbar from './tabbar';
 import camera from './camera';
-import cameraRoll from './cameraRoll';
-import image from './image';
 import photos from './photos';
 import user from './user';
+import permissions from './permissions';
 
 const reducer = combineReducers({
     routes,
     tabbar,
     camera,
-    cameraRoll,
-    image,
     photos,
     user,
+    permissions,
 });
 
 export default reducer;

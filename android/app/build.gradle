@@ -139,6 +139,9 @@ android {
 }
 
 dependencies {
+    compile project(':gl-react-native')
+    compile project(':react-native-store-photos-album')
+    compile project(':react-native-photo-view')
     compile project(':react-native-fs')
     compile project(':react-native-blur')
     compile project(':RNGL')

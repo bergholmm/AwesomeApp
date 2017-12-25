@@ -141,7 +141,7 @@ class EditImage extends Component {
         const path = RNFS.DocumentDirectoryPath + '/' + Date.now() + '.png';
         this.refs.surface.captureFrame({ type: 'png', format: 'file', filePath: path })
         .then((image) => {
-            this.props.saveImage({ url: image, location: this.props.location })
+            this.props.saveImage({ uri: image, location: this.props.location, album: 'React' })
             this.props.changeTab(0);
             this.props.Actions.replace('main');
         });

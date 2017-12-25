@@ -3054,6 +3054,10 @@ npmlog@^4.0.2:
     gauge "~2.7.3"
     set-blocking "~2.0.0"
 
+nt-transmit-transparently@^1.0.7:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/nt-transmit-transparently/-/nt-transmit-transparently-1.0.7.tgz#345cf3ffda06ba1bd629935bafac9e7820385076"
+
 number-is-nan@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
@@ -3464,6 +3468,17 @@ react-native-fs@^2.8.5:
     base-64 "^0.1.0"
     utf8 "^2.1.1"
 
+react-native-image-pan-zoom@^2.0.9:
+  version "2.0.10"
+  resolved "https://registry.yarnpkg.com/react-native-image-pan-zoom/-/react-native-image-pan-zoom-2.0.10.tgz#becc93db8687f9d954a2869591252136b1bf5705"
+
+react-native-image-zoom-viewer@^2.0.16:
+  version "2.0.16"
+  resolved "https://registry.yarnpkg.com/react-native-image-zoom-viewer/-/react-native-image-zoom-viewer-2.0.16.tgz#7b9a8a56aaeb54b339bde398ce286a839c5ddceb"
+  dependencies:
+    nt-transmit-transparently "^1.0.7"
+    react-native-image-pan-zoom "^2.0.9"
+
 react-native-linear-gradient@^2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/react-native-linear-gradient/-/react-native-linear-gradient-2.3.0.tgz#757997197e35edf52e290891a11566e462845da1"
@@ -3498,6 +3513,10 @@ react-native-router-flux@^4.0.0-beta.23:
 react-native-splash-screen@^3.0.6:
   version "3.0.6"
   resolved "https://registry.yarnpkg.com/react-native-splash-screen/-/react-native-splash-screen-3.0.6.tgz#c0bbf2c8ae40a313c4c7044f55e569414ff68332"
+
+react-native-store-photos-album@francisco-sanchez-molina/react-native-store-photos-album:
+  version "0.1.1"
+  resolved "https://codeload.github.com/francisco-sanchez-molina/react-native-store-photos-album/tar.gz/e56b82a34c1ac564346ef1cdce6738734c49536c"
 
 react-native-swiper@^1.5.13:
   version "1.5.13"

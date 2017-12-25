@@ -1,19 +1,14 @@
 import Camera from 'react-native-camera';
 import {
-    UPDATE_PERMISSION_CAMERA,
-    UPDATE_PERMISSION_LOCATION,
-    UPDATE_LOCATION,
     CLEAR_CURRENT_PHOTO,
     SET_PHOTO,
     SWITCH_FLASH,
     SWITCH_CAMERA,
     SET_CAMERA,
+    LOGOUT_CAMERA,
 } from '../actions/camera';
 
 const initialState = {
-    cameraPermission: null,
-    locationPermission: null,
-    location: null,
     currentPhoto: null,
     camera: 'noCamera',
     cameraSettings: {
@@ -27,17 +22,11 @@ const initialState = {
 const camera = (state = initialState, action = {}) => {
     const { type } = action;
 
-    if ( type === UPDATE_PERMISSION_CAMERA ) {
-        return { ...state, cameraPermission: action.permission };
-    }
-    else if ( type === UPDATE_PERMISSION_LOCATION ) {
-        return { ...state, locationPermission: action.permission };
-    }
-    else if ( type === UPDATE_LOCATION ) {
-        return { ...state, location: action.location };
-    }
-    else if ( type === CLEAR_CURRENT_PHOTO ) {
+    if ( type === CLEAR_CURRENT_PHOTO ) {
         return { ...state, currentPhoto: null };
+    }
+    else if ( type === LOGOUT_CAMERA ) {
+        return { ...initialState };
     }
     else if ( type === SET_PHOTO ) {
         return { ...state, currentPhoto: action.photo };

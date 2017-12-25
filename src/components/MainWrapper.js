@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Tabbar from '../containers/Tabbar';
 import Photos from '../containers/Photos';
 import Map from '../containers/Map';
@@ -9,23 +9,38 @@ import {
   View,
 } from 'react-native';
 
-const MainWrapper = (props) => {
-    const { tabIndex } = props;
-    let page = <Photos/>;
+class MainWrapper extends Component {
+    componentDidMount() {
+        const { cameraPermission, locationPermission, photosPermission, getCurrentPosition } = this.props;
 
-    if (tabIndex == 1) {
-        page = <ActionSelect/>
-    }
-    else if (tabIndex == 2) {
-        page = <Map/>;
-    }
+        if ( cameraPermission !== 'authorized' || locationPermission !== 'authorized') {
+            this.props.checkAndGetCameraAndLocationPermission();
+        }
 
-    return (
-        <View style={styles.container}>
-            {page}
-            <Tabbar/>
-        </View>
-    );
+        if ( photosPermission !== 'authorized' ) {
+            this.props.checkAndGetPhotosPermission();
+        }
+
+        getCurrentPosition();
+    }
+    render() {
+        const { tabIndex } = this.props;
+        let page = <Photos/>;
+
+        if (tabIndex == 1) {
+            page = <ActionSelect/>
+        }
+        else if (tabIndex == 2) {
+            page = <Map/>;
+        }
+
+        return (
+            <View style={styles.container}>
+                {page}
+                <Tabbar/>
+            </View>
+        );
+    }
 }
 
 const styles = StyleSheet.create({

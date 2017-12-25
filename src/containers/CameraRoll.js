@@ -1,21 +1,17 @@
 import CameraRoll from  '../components/CameraRoll';
 import { connect } from 'react-redux';
 import { Actions } from 'react-native-router-flux';
-import { setImage } from '../actions/image';
-import {
-    getPhotos,
-    clear,
-} from '../actions/cameraRoll';
+import { setImage, clearCameraRoll, getPhotosCameraRoll } from '../actions/photos';
 
 const mapStateToProps = state => ({
     Actions,
-    drafts: state.cameraRoll.drafts,
-    photos: state.cameraRoll.photos,
+    drafts: state.photos.cameraRoll.drafts,
+    photos: state.photos.cameraRoll.photos,
 });
 
 const mapDispatchToProps = (dispatch) => ({
-    getPhotos: () => dispatch(getPhotos()),
-    clear: () => dispatch(clear()),
+    getPhotos: () => dispatch(getPhotosCameraRoll()),
+    clear: () => dispatch(clearCameraRoll()),
     setImage: (image, location) => dispatch(setImage(image, location)),
 });
 

@@ -62,7 +62,10 @@ const CameraComponent = (props) => {
                         </TouchableHighlight>
                     </View>
                     <View style={ styles.rightButton }>
-                        <TouchableHighlight underlayColor='transparent' style={ styles.topButtonContainer } onPress={ () => goToEditImage(props) }>
+            <TouchableHighlight underlayColor='transparent' style={ styles.topButtonContainer } onPress={ () => {
+                props.clear()
+                goToEditImage(props)
+            }}>
                             <Image source={ require('../../resources/done.png') } style={ styles.doneButton } />
                         </TouchableHighlight>
                     </View>

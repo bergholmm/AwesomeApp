@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { logoutAndRemoveState } from '../actions/user';
 
 const mapStateToProps = state => ({
-    photos: state.photos.photos,
+    photos: state.photos.reactPhotos.photos,
 });
 
 const mapDispatchToProps = (dispatch) => ({

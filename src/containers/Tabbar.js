@@ -4,6 +4,7 @@ import { changeTab } from '../actions/tabbar.js';
 
 const mapStateToProps = state => ({
     index: state.tabbar.index,
+    hide: state.tabbar.hide,
 });
 
 const mapDispatchToProps = (dispatch) => ({

@@ -3,6 +3,9 @@ package com.awesomeapp;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.projectseptember.RNGL.RNGLPackage;
+import com.devialab.camerarollextended.CameraRollExtendedManager;
+import com.reactnative.photoview.PhotoViewPackage;
 import com.rnfs.RNFSPackage;
 import com.cmcewen.blurview.BlurViewPackage;
 import com.projectseptember.RNGL.RNGLPackage;
@@ -30,6 +33,9 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new RNGLPackage(),
+            new CameraRollExtendedManager(),
+            new PhotoViewPackage(),
             new RNFSPackage(),
             new BlurViewPackage(),
             new RCTCameraPackage(),

@@ -1,19 +1,18 @@
 import EditImage from  '../components/EditImage';
 import { connect } from 'react-redux';
-import { clearImage } from '../actions/image';
-import { addImage } from '../actions/photos';
+import { saveToReactPhotos, clearImage } from '../actions/photos';
 import { Actions } from 'react-native-router-flux';
 import { changeTab } from '../actions/tabbar.js';
 
 const mapStateToProps = state => ({
-    image: state.image.image,
-    location: state.image.location,
+    image: state.photos.currentPhoto.image,
+    location: state.photos.currentPhoto.location,
     Actions,
 });
 
 const mapDispatchToProps = (dispatch) => ({
     clear: () => dispatch(clearImage()),
-    saveImage: (image) => dispatch(addImage(image)),
+    saveImage: (image) => dispatch(saveToReactPhotos(image)),
     changeTab: (index) => dispatch(changeTab(index)),
 });
 

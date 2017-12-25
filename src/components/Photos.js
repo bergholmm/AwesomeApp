@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import GradientBackground from './GradientBackground'
 import { PhotoGrid } from 'react-native-photo-grid-frame';
 import {
@@ -13,33 +13,39 @@ import {
 
 const { width, height } = Dimensions.get('window');
 
-const Photos = (props) => (
-    <GradientBackground>
-        <ScrollView style={ styles.container }>
-            <View style={ styles.topContainer }>
-                <View style={ styles.logoutContainer }>
-                    <TouchableHighlight style={ styles.logoutButton } onPress={ () => props.logout() } underlayColor='transparent'>
-                        <Text style={ styles.logoutText }>Logout</Text>
-                    </TouchableHighlight>
-                </View>
-                <View style={ styles.logoContainer }>
-                    <Image source={ require('../../resources/logox2.png') } style={ styles.logo } />
-                </View>
-            </View>
-            <View style={ styles.profileContainer }>
-                <Image source={ require('../../resources/testProfilePicture.jpg') } style={ styles.profilePicture } />
-                <View style={ styles.score }>
-                    <GradientBackground>
-                        <Text style={ styles.scoreText }>42</Text>
-                    </GradientBackground>
-                </View>
-                <Text style={ styles.name }>Marcus Bergholm</Text>
-                <Text style={ styles.location }>Stockholm, Sweden</Text>
-            </View>
-            <PhotoGrid PhotosList={ props.photos } />
-        </ScrollView>
-    </GradientBackground>
-);
+class Photos extends Component {
+    componentDidMount() {
+    }
+    render() {
+        return (
+            <GradientBackground>
+                <ScrollView style={ styles.container }>
+                    <View style={ styles.topContainer }>
+                        <View style={ styles.logoutContainer }>
+                            <TouchableHighlight style={ styles.logoutButton } onPress={ () => this.props.logout() } underlayColor='transparent'>
+                                <Text style={ styles.logoutText }>Logout</Text>
+                            </TouchableHighlight>
+                        </View>
+                        <View style={ styles.logoContainer }>
+                            <Image source={ require('../../resources/logox2.png') } style={ styles.logo } />
+                        </View>
+                    </View>
+                    <View style={ styles.profileContainer }>
+                        <Image source={ require('../../resources/testProfilePicture.jpg') } style={ styles.profilePicture } />
+                        <View style={ styles.score }>
+                            <GradientBackground>
+                                <Text style={ styles.scoreText }>42</Text>
+                            </GradientBackground>
+                        </View>
+                        <Text style={ styles.name }>Marcus Bergholm</Text>
+                        <Text style={ styles.location }>Stockholm, Sweden</Text>
+                    </View>
+                    <PhotoGrid PhotosList={ this.props.photos } />
+                </ScrollView>
+            </GradientBackground>
+        );
+    }
+}
 
 const styles = StyleSheet.create({
     container: {

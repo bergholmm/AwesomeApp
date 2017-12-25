@@ -11,21 +11,7 @@ import {
 class App extends Component {
     constructor(props) {
         super(props);
-        // props.resetState();
         props.loadState();
-    }
-    componentDidMount() {
-        const { cameraPermission, locationPermission, photosPermission, getCurrentPosition } = this.props;
-
-        if ( cameraPermission !== 'authorized' || locationPermission !== 'authorized') {
-            this.props.checkAndGetCameraAndLocationPermission();
-        }
-
-        if ( photosPermission !== 'authorized' ) {
-            this.props.checkAndGetPhotosPermission();
-        }
-
-        getCurrentPosition();
     }
     render() {
         return (

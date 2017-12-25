@@ -1,9 +1,9 @@
 import Camera from  '../components/Camera';
 import { connect } from 'react-redux';
 import { Actions } from 'react-native-router-flux';
-import { setImageFromCamera } from '../actions/image';
+import { setImageFromCamera } from '../actions/photos';
+import { getLocation } from '../actions/permissions';
 import {
-    getLocation,
     switchFlash,
     switchCamera,
     takePicture,
@@ -13,9 +13,9 @@ import {
 
 const mapStateToProps = state => ({
     Actions,
-    location: state.camera.location,
-    cameraPermission: state.camera.cameraPermission,
-    locationPermission: state.camera.locationPermission,
+    location: state.permissions.location,
+    cameraPermission: state.permissions.cameraPermission,
+    locationPermission: state.permissions.locationPermission,
     photo: state.camera.currentPhoto,
     settings: state.camera.cameraSettings,
     camera: state.camera.camera,

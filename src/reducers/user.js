@@ -1,12 +1,14 @@
 import {
     LOGIN,
-    LOGOUT,
+    LOGOUT_USER,
     FETCHING_LOCAL_STATE,
     LOGIN_STATE,
 } from '../actions/user';
 
 const initialState = {
     token: null,
+    id: 1,
+    name: 'name',
     firstLogin: true,
     loading: {
         fetchingLocalState: true,
@@ -22,8 +24,8 @@ const user = (state = initialState, action = {}) => {
     else if ( type === LOGIN_STATE ) {
         return { ...state, firstLogin: action.val };
     }
-    else if ( type === LOGOUT ) {
-        return { ...state, token: null };
+    else if ( type === LOGOUT_USER ) {
+        return { ...initialState };
     }
     else if ( type === FETCHING_LOCAL_STATE ) {
         const x = { ...state.loading, fetchingLocalState: action.fetchingLocalState };
