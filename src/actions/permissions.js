@@ -1,4 +1,6 @@
 import Permissions from 'react-native-permissions';
+import { PermissionsAndroid } from 'react-native';
+
 
 // Action types
 export const UPDATE_PERMISSION_CAMERA = 'UPDATE_PERMISSION_CAMERA';
@@ -114,4 +116,12 @@ export const checkAndGetPhotosPermission = () => {
             }
         });
     };
+};
+
+export const requestExternalStoragePermission = () => {
+    return (dispatch, getState) => {
+        Permissions.request('storage').then(response => {
+            console.log(response);
+        });
+    }
 };

@@ -4,6 +4,7 @@ import { Actions } from 'react-native-router-flux';
 import { logoutCamera } from './camera';
 import { logoutPhoto } from './photos';
 import { setPermissions } from './permissions';
+import { listUsers, createUserAlbum, getUserAlbum } from './aws';
 
 // Action types
 
@@ -14,10 +15,11 @@ export const LOGIN_STATE = 'LOGIN_STATE';
 
 // Actions creators
 
-export const login = (token) => {
+export const login = (token, userData) => {
     return {
         type: LOGIN,
         token,
+        userData,
     };
 };
 
@@ -42,9 +44,10 @@ export const setLoginState = (val) => {
 };
 
 
-export const saveToken = (token, id) => {
+export const saveToken = (token, userData) => {
     return async (dispatch, getState) => {
         await AsyncStorage.setItem('token', token);
+        await AsyncStorage.setItem('userData', JSON.stringify(userData));
         await AsyncStorage.setItem('firstLogin', 'false');
     };
 };
@@ -52,14 +55,13 @@ export const saveToken = (token, id) => {
 export const removeToken = () => {
     return async (dispatch, getState) => {
         await AsyncStorage.setItem('token', '');
+        await AsyncStorage.setItem('userData', '');
     };
 };
 
 export const savePermissions = () => {
     return async (dispatch, getState) => {
         const { permissions } = getState();
-        console.log('savePer', permissions)
-
         permissionsStringified = JSON.stringify(permissions);
         await AsyncStorage.setItem('permissions', permissionsStringified);
     }
@@ -68,12 +70,9 @@ export const savePermissions = () => {
 export const loadPermissions = () => {
     return async (dispatch, getState) => {
         const permissions = JSON.parse(await AsyncStorage.getItem('permissions'));
-
-        console.log('load', permissions)
         if (permissions === null) {
             return;
         }
-
         dispatch(setPermissions(permissions));
     }
 }
@@ -85,10 +84,12 @@ export const loadAppState = () => {
         const firstLogin = (await AsyncStorage.getItem('firstLogin') == 'true');
 
         if (token === '' || token === null) {
-            dispatch(login(null));
+            dispatch(logoutUser());
         } else {
-            dispatch(login(token))
+            const userData = JSON.parse(await AsyncStorage.getItem('userData'));
+            dispatch(login(token, userData))
             dispatch(loadPermissions())
+            dispatch(getUserAlbum(userData.id));
             Actions.replace('main');
         }
         dispatch(setLoginState(firstLogin));
@@ -101,6 +102,7 @@ export const loadAppState = () => {
 export const resetAppState = () => {
     return async (dispatch, getState) => {
         await AsyncStorage.setItem('token', '');
+        await AsyncStorage.setItem('userData', '');
         await AsyncStorage.setItem('permissions', '');
         await AsyncStorage.setItem('firstLogin', 'true');
     };
@@ -110,20 +112,22 @@ export const logoutAndRemoveState = () => {
     return (dispatch, getState) => {
         dispatch(savePermissions());
         dispatch(removeToken());
-        dispatch(logoutUser());
         dispatch(logoutCamera());
         dispatch(logoutPhoto());
         Actions.replace('landing');
     };
 };
 
-export const loginAndSaveState = (token) => {
+export const loginAndSaveState = (token, userData) => {
     return (dispatch, getState) => {
         const { firstLogin } = getState().user;
+        const { id } = userData;
 
+        dispatch(createUserAlbum(id));
+        dispatch(getUserAlbum(id));
         dispatch(loadPermissions());
-        dispatch(saveToken(token));
-        dispatch(login(token));
+        dispatch(saveToken(token, userData));
+        dispatch(login(token, userData));
         dispatch(setLoginState(false));
 
         if (firstLogin) {

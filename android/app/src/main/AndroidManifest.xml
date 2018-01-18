@@ -14,7 +14,7 @@
 
     <uses-sdk
         android:minSdkVersion="16"
-        android:targetSdkVersion="22" />
+        android:targetSdkVersion="26" />
 
     <application
       android:name=".MainApplication"
@@ -23,9 +23,11 @@
       android:label="@string/app_name"
       android:icon="@mipmap/ic_launcher"
       android:theme="@style/AppTheme">
-      <meta-data
+        <meta-data
           android:name="com.google.android.geo.API_KEY"
           android:value=" AIzaSyBLD5Eyny1qT3q3fEGIfbfRhD5FyUy1Now "/>
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+
         <activity
             android:name=".SplashActivity"
             android:exported="true"

@@ -10,7 +10,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = (dispatch) => ({
     loadState: () => dispatch(loadAppState()),
-    loginAndSaveState: (token) => dispatch(loginAndSaveState(token)),
+    loginAndSaveState: (token, userData) => dispatch(loginAndSaveState(token, userData)),
     resetState: () => dispatch(resetAppState()),
 })
 

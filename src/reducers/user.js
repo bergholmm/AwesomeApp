@@ -7,8 +7,9 @@ import {
 
 const initialState = {
     token: null,
-    id: 1,
-    name: 'name',
+    id: null,
+    name: null,
+    picture: null,
     firstLogin: true,
     loading: {
         fetchingLocalState: true,
@@ -19,7 +20,8 @@ const user = (state = initialState, action = {}) => {
     const { type } = action;
 
     if ( type === LOGIN ) {
-        return { ...state, token: action.token };
+        const { id, name, picture } = action.userData;
+        return { ...state, token: action.token, id, name, picture: picture.data.url };
     }
     else if ( type === LOGIN_STATE ) {
         return { ...state, firstLogin: action.val };

@@ -37,6 +37,10 @@
 		048B2D3D1FBDF3FF00C8EDE6 /* AIRGMSMarker.m in Sources */ = {isa = PBXBuildFile; fileRef = 048B2CF71FBDF3FF00C8EDE6 /* AIRGMSMarker.m */; };
 		04A258FE1FBEE426008E3DE2 /* libSplashScreen.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A258FD1FBEE3EE008E3DE2 /* libSplashScreen.a */; };
 		04A6118A1FD15682008A79AE /* libRNFS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A611851FD1565C008A79AE /* libRNFS.a */; };
+		04B703CB20109E9400E55C4E /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04B703C720109E9200E55C4E /* FBSDKLoginKit.framework */; };
+		04B703CC20109E9400E55C4E /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04B703C820109E9300E55C4E /* FBSDKShareKit.framework */; };
+		04B703CD20109E9400E55C4E /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04B703C920109E9300E55C4E /* FBSDKCoreKit.framework */; };
+		04B703CE20109E9400E55C4E /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04B703CA20109E9400E55C4E /* Bolts.framework */; };
 		04ED509F1FCB657600D070C0 /* libReactNativePermissions.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04ED509D1FCB655A00D070C0 /* libReactNativePermissions.a */; };
 		04F839661FC4700B0013854F /* libRCTCameraRoll.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04F839461FC46FDB0013854F /* libRCTCameraRoll.a */; };
 		133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C398B91ACF4ADC00677621 /* libRCTLinking.a */; };
@@ -59,13 +63,13 @@
 		2D02E4C81E0B4AEC006451C7 /* libRCTWebSocket-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3E991DF850E9000B6D8A /* libRCTWebSocket-tvOS.a */; };
 		2D02E4C91E0B4AEC006451C7 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA31DF850E9000B6D8A /* libReact.a */; };
 		2DCD954D1E0B4F2C00145EB5 /* AwesomeAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* AwesomeAppTests.m */; };
+		4232C5F9EBDB411FBAF9DD44 /* libRCTFBSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FC8E94937A74812914D76EE /* libRCTFBSDK.a */; };
 		487E73D4C0016636C1C44C00 /* libPods-AwesomeApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82A2591D6C0D7A73DEFEFA26 /* libPods-AwesomeApp.a */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		748523CBD3C4461BB252F028 /* libReactNativeStorePhotosAlbum.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 28A1562D7D464F2EAAF82E4E /* libReactNativeStorePhotosAlbum.a */; };
 		7B1EF5EA7DD64DAB9258881D /* libAirMaps.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29D9BB68523D4957B94151AD /* libAirMaps.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
-		B80B6F50C9AB46DD9186BF85 /* libRNPhotoView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 603EE1B39FA9473E8A5291AA /* libRNPhotoView.a */; };
 		D6F9717F42ED4CDCBAA8D640 /* libBVLinearGradient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FFDE6045499E423F92C19B18 /* libBVLinearGradient.a */; };
 /* End PBXBuildFile section */
 
@@ -258,6 +262,13 @@
 			proxyType = 2;
 			remoteGlobalIDString = 6456441F1EB8DA9100672408;
 			remoteInfo = "RNFS-tvOS";
+		};
+		04B703C520109BF800E55C4E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3AAF6B8697404B1EA6F5EC0E /* RCTFBSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9350E0F11CE3B0920041D815;
+			remoteInfo = RCTFBSDK;
 		};
 		04ED509C1FCB655A00D070C0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -482,6 +493,10 @@
 		048B2CF81FBDF3FF00C8EDE6 /* DummyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DummyView.h; sourceTree = "<group>"; };
 		04A258F81FBEE3ED008E3DE2 /* SplashScreen.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SplashScreen.xcodeproj; path = "../node_modules/react-native-splash-screen/ios/SplashScreen.xcodeproj"; sourceTree = "<group>"; };
 		04A611541FD1565C008A79AE /* RNFS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNFS.xcodeproj; path = "../node_modules/react-native-fs/RNFS.xcodeproj"; sourceTree = "<group>"; };
+		04B703C720109E9200E55C4E /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		04B703C820109E9300E55C4E /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		04B703C920109E9300E55C4E /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		04B703CA20109E9400E55C4E /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		04ED50701FCB655900D070C0 /* ReactNativePermissions.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ReactNativePermissions.xcodeproj; path = "../node_modules/react-native-permissions/ReactNativePermissions.xcodeproj"; sourceTree = "<group>"; };
 		04F839391FC46FDB0013854F /* RCTCameraRoll.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTCameraRoll.xcodeproj; path = "../node_modules/react-native/Libraries/CameraRoll/RCTCameraRoll.xcodeproj"; sourceTree = "<group>"; };
 		139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTSettings.xcodeproj; path = "../node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj"; sourceTree = "<group>"; };
@@ -498,12 +513,14 @@
 		2D02E47B1E0B4A5D006451C7 /* AwesomeApp-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AwesomeApp-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* AwesomeApp-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AwesomeApp-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37D2CBCD39FD4D908755ED34 /* AirMaps.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = AirMaps.xcodeproj; path = "../node_modules/react-native-maps/lib/ios/AirMaps.xcodeproj"; sourceTree = "<group>"; };
+		3AAF6B8697404B1EA6F5EC0E /* RCTFBSDK.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RCTFBSDK.xcodeproj; path = "../node_modules/react-native-fbsdk/ios/RCTFBSDK.xcodeproj"; sourceTree = "<group>"; };
 		5A169EDE96A34731A66257AA /* BVLinearGradient.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = BVLinearGradient.xcodeproj; path = "../node_modules/react-native-linear-gradient/BVLinearGradient.xcodeproj"; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		603EE1B39FA9473E8A5291AA /* libRNPhotoView.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNPhotoView.a; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		82A2591D6C0D7A73DEFEFA26 /* libPods-AwesomeApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AwesomeApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
+		9FC8E94937A74812914D76EE /* libRCTFBSDK.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRCTFBSDK.a; sourceTree = "<group>"; };
 		ADA23FFAA7953D0670674E72 /* Pods-AwesomeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwesomeApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AwesomeApp/Pods-AwesomeApp.debug.xcconfig"; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
 		BA103412420F4F5A9C81D7AB /* RNPhotoView.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNPhotoView.xcodeproj; path = "../node_modules/react-native-photo-view/ios/RNPhotoView.xcodeproj"; sourceTree = "<group>"; };
@@ -527,6 +544,7 @@
 			files = (
 				04A6118A1FD15682008A79AE /* libRNFS.a in Frameworks */,
 				04035B471FD080DF0093F674 /* libRNBlur.a in Frameworks */,
+				04B703CD20109E9400E55C4E /* FBSDKCoreKit.framework in Frameworks */,
 				047B44721FCEFC3A00BB20C4 /* libRNGL.a in Frameworks */,
 				04ED509F1FCB657600D070C0 /* libReactNativePermissions.a in Frameworks */,
 				043B6B891FC6CA2F003D9DBC /* libRCTCamera.a in Frameworks */,
@@ -536,8 +554,10 @@
 				5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
 				5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */,
+				04B703CB20109E9400E55C4E /* FBSDKLoginKit.framework in Frameworks */,
 				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
 				00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */,
+				04B703CE20109E9400E55C4E /* Bolts.framework in Frameworks */,
 				00C302E81ABCBA2D00DB3ED1 /* libRCTImage.a in Frameworks */,
 				133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */,
 				00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */,
@@ -548,8 +568,9 @@
 				D6F9717F42ED4CDCBAA8D640 /* libBVLinearGradient.a in Frameworks */,
 				7B1EF5EA7DD64DAB9258881D /* libAirMaps.a in Frameworks */,
 				487E73D4C0016636C1C44C00 /* libPods-AwesomeApp.a in Frameworks */,
-				B80B6F50C9AB46DD9186BF85 /* libRNPhotoView.a in Frameworks */,
+				04B703CC20109E9400E55C4E /* FBSDKShareKit.framework in Frameworks */,
 				748523CBD3C4461BB252F028 /* libReactNativeStorePhotosAlbum.a in Frameworks */,
+				4232C5F9EBDB411FBAF9DD44 /* libRCTFBSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -661,6 +682,7 @@
 				29D9BB68523D4957B94151AD /* libAirMaps.a */,
 				603EE1B39FA9473E8A5291AA /* libRNPhotoView.a */,
 				28A1562D7D464F2EAAF82E4E /* libReactNativeStorePhotosAlbum.a */,
+				9FC8E94937A74812914D76EE /* libRCTFBSDK.a */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -765,6 +787,14 @@
 			children = (
 				04A611851FD1565C008A79AE /* libRNFS.a */,
 				04A611871FD1565C008A79AE /* libRNFS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		04B703C220109BF800E55C4E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				04B703C620109BF800E55C4E /* libRCTFBSDK.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -892,6 +922,7 @@
 				37D2CBCD39FD4D908755ED34 /* AirMaps.xcodeproj */,
 				BA103412420F4F5A9C81D7AB /* RNPhotoView.xcodeproj */,
 				E35EDED91E3049458BBAD7DF /* ReactNativeStorePhotosAlbum.xcodeproj */,
+				3AAF6B8697404B1EA6F5EC0E /* RCTFBSDK.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -945,6 +976,10 @@
 		FD650680D2623C2E5F181574 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				04B703CA20109E9400E55C4E /* Bolts.framework */,
+				04B703C920109E9300E55C4E /* FBSDKCoreKit.framework */,
+				04B703C720109E9200E55C4E /* FBSDKLoginKit.framework */,
+				04B703C820109E9300E55C4E /* FBSDKShareKit.framework */,
 				82A2591D6C0D7A73DEFEFA26 /* libPods-AwesomeApp.a */,
 			);
 			name = Frameworks;
@@ -1096,6 +1131,10 @@
 				{
 					ProductGroup = 04F8393A1FC46FDB0013854F /* Products */;
 					ProjectRef = 04F839391FC46FDB0013854F /* RCTCameraRoll.xcodeproj */;
+				},
+				{
+					ProductGroup = 04B703C220109BF800E55C4E /* Products */;
+					ProjectRef = 3AAF6B8697404B1EA6F5EC0E /* RCTFBSDK.xcodeproj */;
 				},
 				{
 					ProductGroup = 00C302B61ABCB90400DB3ED1 /* Products */;
@@ -1353,6 +1392,13 @@
 			fileType = archive.ar;
 			path = libRNFS.a;
 			remoteRef = 04A611861FD1565C008A79AE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		04B703C620109BF800E55C4E /* libRCTFBSDK.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTFBSDK.a;
+			remoteRef = 04B703C520109BF800E55C4E /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		04ED509D1FCB655A00D070C0 /* libReactNativePermissions.a */ = {
@@ -1718,12 +1764,14 @@
 					"$(SRCROOT)/../node_modules/react-native-maps/lib/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-photo-view/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-store-photos-album/ios/ReactNativeStorePhotosAlbum",
+					"$(SRCROOT)/../node_modules/react-native-fbsdk/ios/RCTFBSDK/**",
 				);
 				INFOPLIST_FILE = AwesomeAppTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1750,12 +1798,14 @@
 					"$(SRCROOT)/../node_modules/react-native-maps/lib/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-photo-view/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-store-photos-album/ios/ReactNativeStorePhotosAlbum",
+					"$(SRCROOT)/../node_modules/react-native-fbsdk/ios/RCTFBSDK/**",
 				);
 				INFOPLIST_FILE = AwesomeAppTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1779,6 +1829,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = 7FAEXSY34T;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-linear-gradient/BVLinearGradient",
@@ -1792,6 +1846,7 @@
 					"$(SRCROOT)/../../react-native/React/**",
 					"$(SRCROOT)/../node_modules/react-native-photo-view/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-store-photos-album/ios/ReactNativeStorePhotosAlbum",
+					"$(SRCROOT)/../node_modules/react-native-fbsdk/ios/RCTFBSDK/**",
 				);
 				INFOPLIST_FILE = AwesomeApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
@@ -1815,6 +1870,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 7FAEXSY34T;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-linear-gradient/BVLinearGradient",
@@ -1828,6 +1887,7 @@
 					"$(SRCROOT)/../../react-native/React/**",
 					"$(SRCROOT)/../node_modules/react-native-photo-view/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-store-photos-album/ios/ReactNativeStorePhotosAlbum",
+					"$(SRCROOT)/../node_modules/react-native-fbsdk/ios/RCTFBSDK/**",
 				);
 				INFOPLIST_FILE = AwesomeApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
@@ -1862,11 +1922,13 @@
 					"$(SRCROOT)/../node_modules/react-native-maps/lib/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-photo-view/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-store-photos-album/ios/ReactNativeStorePhotosAlbum",
+					"$(SRCROOT)/../node_modules/react-native-fbsdk/ios/RCTFBSDK/**",
 				);
 				INFOPLIST_FILE = "AwesomeApp-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1903,11 +1965,13 @@
 					"$(SRCROOT)/../node_modules/react-native-maps/lib/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-photo-view/ios/**",
 					"$(SRCROOT)/../node_modules/react-native-store-photos-album/ios/ReactNativeStorePhotosAlbum",
+					"$(SRCROOT)/../node_modules/react-native-fbsdk/ios/RCTFBSDK/**",
 				);
 				INFOPLIST_FILE = "AwesomeApp-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
@@ -1944,6 +2008,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.AwesomeApp-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1968,6 +2033,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",

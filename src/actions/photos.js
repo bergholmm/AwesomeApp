@@ -1,6 +1,9 @@
 import React from 'react';
 import { CameraRoll } from 'react-native';
 import CameraRollExtended from 'react-native-store-photos-album';
+import { addPhotoToAlbum } from './aws';
+import { Platform } from 'react-native';
+
 
 // Action types
 
@@ -98,10 +101,19 @@ export const getPhotosCameraRoll = ( numPhotos = 50) => {
 
 export const saveToReactPhotos = (photo) => {
     return (dispatch, getState) => {
-        CameraRollExtended.saveToCameraRoll(photo, 'photo')
-        .then(p => {
-            dispatch(addImage({ ...photo, url: p }));
-        });
+        dispatch(addPhotoToAlbum(photo));
+
+        if (Platform.OS === 'ios') {
+            CameraRollExtended.saveToCameraRoll(photo, 'photo')
+            .then(p => {
+                dispatch(addImage({ ...photo, url: p }));
+            });
+        } else {
+            CameraRoll.saveToCameraRoll(photo.uri)
+            .then(p => {
+                dispatch(addImage({ ...photo, url: p }));
+            });
+        }
     };
 };
 

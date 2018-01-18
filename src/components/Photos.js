@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import GradientBackground from './GradientBackground'
 import { PhotoGrid } from 'react-native-photo-grid-frame';
+import { Platform } from 'react-native';
 import {
     StyleSheet,
     Image,
@@ -15,8 +16,14 @@ const { width, height } = Dimensions.get('window');
 
 class Photos extends Component {
     componentDidMount() {
+        this.props.getCurrentPosition();
+
+        if ( Platform.OS === 'android' ) {
+            this.props.requestExternalStoragePermission();
+        }
     }
     render() {
+        const score = this.props.photos.length || 0;
         return (
             <GradientBackground>
                 <ScrollView style={ styles.container }>
@@ -31,14 +38,13 @@ class Photos extends Component {
                         </View>
                     </View>
                     <View style={ styles.profileContainer }>
-                        <Image source={ require('../../resources/testProfilePicture.jpg') } style={ styles.profilePicture } />
+                        <Image source={{ uri: this.props.profilePicture }} style={ styles.profilePicture } />
                         <View style={ styles.score }>
                             <GradientBackground>
-                                <Text style={ styles.scoreText }>42</Text>
+                                <Text style={ styles.scoreText }>{ score }</Text>
                             </GradientBackground>
                         </View>
-                        <Text style={ styles.name }>Marcus Bergholm</Text>
-                        <Text style={ styles.location }>Stockholm, Sweden</Text>
+                        <Text style={ styles.name }>{ this.props.name }</Text>
                     </View>
                     <PhotoGrid PhotosList={ this.props.photos } />
                 </ScrollView>
@@ -46,6 +52,7 @@ class Photos extends Component {
         );
     }
 }
+                        // <Text style={ styles.location }>Stockholm, Sweden</Text>
 
 const styles = StyleSheet.create({
     container: {
@@ -69,7 +76,7 @@ const styles = StyleSheet.create({
     logoutButton: {
     },
     profileContainer: {
-        justifyContent: 'flex-end',
+        justifyContent: 'center',
         alignItems: 'center',
         height: 275,
         width: '100%',
@@ -107,7 +114,7 @@ const styles = StyleSheet.create({
         overflow: 'hidden',
         position: 'absolute',
         right: '32%',
-        bottom: '32%',
+        bottom: '38%',
     },
     name: {
         color: 'white',

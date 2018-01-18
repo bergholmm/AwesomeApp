@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import GradientBackground from './GradientBackground'
 import MapView from 'react-native-maps';
 import ImageViewer from 'react-native-image-zoom-viewer';
+import { Platform } from 'react-native';
 import {
     StyleSheet,
     View,
@@ -35,30 +36,35 @@ class Map extends Component {
         });
     }
     render() {
-        const { photos = [] } = this.props;
+        const { photos } = this.props;
+        position = this.props.position || position;
 
-        const photosWithLocation = photos.filter( photo => photo.location !== null || photo.location !== undefined );
-        const photosWithLocation2 = photosWithLocation.filter( photo => (
-            !(Object.keys(photo.location).length === 0 && photo.location.constructor === Object)
-        ));
+        const photosWithLocation = photos.filter( photo => photo.location );
 
-        const markers = photosWithLocation2.map((photo, i) =>
-            <MapView.Marker
-                key={ i }
-                coordinate={ photo.location }
-            >
-                <TouchableHighlight underlayColor='transparent' onPress={ () => this.displayPhoto(photo) } >
-                    <Image source={{ uri: photo.url }} style={ styles.pin } />
-                </TouchableHighlight>
-            </MapView.Marker>
-        );
-
-        if ( this.props.position !== null ) {
-            if (!(Object.keys(this.props.position).length === 0 && this.props.position.constructor === Object)) {
-                position = this.props.position;
-            }
+        let markers;
+        if ( Platform.OS === 'android' ) {
+            markers = photosWithLocation.map((photo, i) =>
+                <MapView.Marker
+                    key={ i + '_' + Date.now() }
+                    coordinate={ photo.location }
+                >
+                    <TouchableHighlight underlayColor='transparent' onPress={ () => this.displayPhoto(photo) } >
+                        <View style={ [styles.pin, {backgroundColor: 'pink'}] }></View>
+                    </TouchableHighlight>
+                </MapView.Marker>
+            );
+        } else {
+            markers = photosWithLocation.map((photo, i) =>
+                <MapView.Marker
+                    key={ i + '_' + Date.now() }
+                    coordinate={ photo.location }
+                >
+                    <TouchableHighlight underlayColor='transparent' onPress={ () => this.displayPhoto(photo) } >
+                        <Image source={{ uri: photo.url }} style={ styles.pin } />
+                    </TouchableHighlight>
+                </MapView.Marker>
+            );
         }
-
 
         let content = <View></View>;
         if (this.state.photo !== null) {

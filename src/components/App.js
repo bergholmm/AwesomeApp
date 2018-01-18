@@ -8,10 +8,57 @@ import {
     TouchableHighlight,
 } from 'react-native';
 
+
+const FBSDK = require('react-native-fbsdk');
+const {
+    LoginManager,
+    AccessToken,
+    GraphRequest,
+    GraphRequestManager,
+} = FBSDK;
+
+
+
+const responseInfoCallback = (token, loginFunc) => (error, result) => {
+    if (error) {
+        console.log('Error fetching data: ',error);
+    } else {
+        loginFunc(token, result);
+    }
+};
+
 class App extends Component {
     constructor(props) {
         super(props);
         props.loadState();
+    }
+    handleFBLogin(loginFunc) {
+        LoginManager.logInWithReadPermissions(['public_profile', 'email', 'user_friends']).then(
+            (result) => {
+                if (result.isCancelled) {
+                } else {
+                    AccessToken.getCurrentAccessToken().then(
+                        (data) => {
+                            const infoRequest = new GraphRequest(
+                                '/me',
+                                {
+                                    parameters: {
+                                        fields: {
+                                            string: 'picture.type(large),name'
+                                        }
+                                    }
+                                },
+                                responseInfoCallback(data.accessToken, loginFunc),
+                            );
+                            new GraphRequestManager().addRequest(infoRequest).start();
+                        }
+                    )
+                }
+            },
+            (error) => {
+                console.log('Login fail with error: ' + error)
+            }
+        );
     }
     render() {
         return (
@@ -20,10 +67,10 @@ class App extends Component {
                     <Image source={ require('../../resources/logox2.png') } style={ styles.logo } />
                 </View>
                 <View style={ styles.loginContainer }>
-                    <TouchableHighlight underlayColor='white' style={ styles.buttonContainer } onPress={ () => this.props.loginAndSaveState('token') }>
+                    <TouchableHighlight underlayColor='white' style={ styles.buttonContainer } onPress={ () => this.handleFBLogin(this.props.loginAndSaveState) }>
                         <Text style={ styles.buttonText }>Login with Facebook</Text>
                     </TouchableHighlight>
-                    <Text onPress={ this.props.resetState } style={ styles.smallText }>App name here</Text>
+                    <Text onPress={ this.props.resetState } style={ styles.smallText }>React</Text>
                 </View>
             </GradientBackground>
         );
