@@ -1,4 +1,4 @@
-package com.awesomeapp;
+package com.rewind;
 
 import android.os.Bundle;
 import com.facebook.react.ReactActivity;
@@ -24,6 +24,6 @@ public class MainActivity extends ReactActivity {
      */
     @Override
     protected String getMainComponentName() {
-        return "AwesomeApp";
+        return "Rewind";
     }
 }
