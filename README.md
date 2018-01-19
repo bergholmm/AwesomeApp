@@ -1,4 +1,4 @@
-# AwesomeApp
+# Rewind
 Cross platform app for a course project
 
 ## Requirements
