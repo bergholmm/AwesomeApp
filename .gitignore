@@ -1,5 +1,7 @@
 config.js
 ios/assets/
+ios/Rewind/main.jsbundle
+ios/Rewind/main.jsbundle.meta
 
 # OSX
 #
