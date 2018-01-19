@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-               BuildableName = "AwesomeApp-tvOS.app"
-               BlueprintName = "AwesomeApp-tvOS"
-               ReferencedContainer = "container:AwesomeApp.xcodeproj">
+               BuildableName = "Rewind-tvOS.app"
+               BlueprintName = "Rewind-tvOS"
+               ReferencedContainer = "container:Rewind.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E48F1E0B4A5D006451C7"
-               BuildableName = "AwesomeApp-tvOSTests.xctest"
-               BlueprintName = "AwesomeApp-tvOSTests"
-               ReferencedContainer = "container:AwesomeApp.xcodeproj">
+               BuildableName = "Rewind-tvOSTests.xctest"
+               BlueprintName = "Rewind-tvOSTests"
+               ReferencedContainer = "container:Rewind.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -61,9 +61,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E48F1E0B4A5D006451C7"
-               BuildableName = "AwesomeApp-tvOSTests.xctest"
-               BlueprintName = "AwesomeApp-tvOSTests"
-               ReferencedContainer = "container:AwesomeApp.xcodeproj">
+               BuildableName = "Rewind-tvOSTests.xctest"
+               BlueprintName = "Rewind-tvOSTests"
+               ReferencedContainer = "container:Rewind.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -71,9 +71,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "AwesomeApp-tvOS.app"
-            BlueprintName = "AwesomeApp-tvOS"
-            ReferencedContainer = "container:AwesomeApp.xcodeproj">
+            BuildableName = "Rewind-tvOS.app"
+            BlueprintName = "Rewind-tvOS"
+            ReferencedContainer = "container:Rewind.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -94,9 +94,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "AwesomeApp-tvOS.app"
-            BlueprintName = "AwesomeApp-tvOS"
-            ReferencedContainer = "container:AwesomeApp.xcodeproj">
+            BuildableName = "Rewind-tvOS.app"
+            BlueprintName = "Rewind-tvOS"
+            ReferencedContainer = "container:Rewind.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -113,9 +113,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "AwesomeApp-tvOS.app"
-            BlueprintName = "AwesomeApp-tvOS"
-            ReferencedContainer = "container:AwesomeApp.xcodeproj">
+            BuildableName = "Rewind-tvOS.app"
+            BlueprintName = "Rewind-tvOS"
+            ReferencedContainer = "container:Rewind.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

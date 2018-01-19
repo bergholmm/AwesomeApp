@@ -1,4 +1,4 @@
 import { AppRegistry } from 'react-native';
 import App from './App';
 
-AppRegistry.registerComponent('AwesomeApp', () => App);
+AppRegistry.registerComponent('Rewind', () => App);

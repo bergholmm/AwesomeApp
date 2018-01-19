@@ -1,19 +1,10 @@
 platform :ios, '8.0'
 
-target 'AwesomeApp' do
+target 'Rewind' do
 
 pod 'yoga', :path => '../node_modules/react-native/ReactCommon/yoga/yoga.podspec'
 
 pod 'GoogleMaps'
 
-  pod 'react-native-splash-screen', :path => '../node_modules/react-native-splash-screen'
-
-  pod 'react-native-camera', :path => '../node_modules/react-native-camera'
-
-  pod 'ReactNativePermissions', :path => '../node_modules/react-native-permissions'
-
-  pod 'react-native-blur', :path => '../node_modules/react-native-blur'
-
-  pod 'RNFS', :path => '../node_modules/react-native-fs'
-
 end
+

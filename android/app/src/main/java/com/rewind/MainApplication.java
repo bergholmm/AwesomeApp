@@ -1,4 +1,4 @@
-package com.awesomeapp;
+package com.rewind;
 
 import android.app.Application;
 

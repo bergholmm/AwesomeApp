@@ -70,7 +70,7 @@ class App extends Component {
                     <TouchableHighlight underlayColor='white' style={ styles.buttonContainer } onPress={ () => this.handleFBLogin(this.props.loginAndSaveState) }>
                         <Text style={ styles.buttonText }>Login with Facebook</Text>
                     </TouchableHighlight>
-                    <Text onPress={ this.props.resetState } style={ styles.smallText }>React</Text>
+                    <Text onPress={ this.props.resetState } style={ styles.smallText }>Rewind</Text>
                 </View>
             </GradientBackground>
         );
