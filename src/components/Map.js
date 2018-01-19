@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import GradientBackground from './GradientBackground'
 import MapView from 'react-native-maps';
-import ImageViewer from 'react-native-image-zoom-viewer';
+import ZoomImage from 'react-native-zoom-image';
 import { Platform } from 'react-native';
 import {
     StyleSheet,
@@ -18,22 +18,9 @@ let position = { latitude: 37.78825, longitude: -122.4324 };
 class Map extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            photo: null,
-        };
     }
     componentDidMount() {
         this.props.getCurrentPosition();
-    }
-    displayPhoto(photo) {
-        this.setState({
-            photo,
-        });
-    }
-    backToMap() {
-        this.setState({
-            photo: null,
-        });
     }
     render() {
         const { photos } = this.props;
@@ -45,7 +32,7 @@ class Map extends Component {
         if ( Platform.OS === 'android' ) {
             markers = photosWithLocation.map((photo, i) =>
                 <MapView.Marker
-                    key={ i + '_' + Date.now() }
+                    key={ i }
                     coordinate={ photo.location }
                 >
                     <TouchableHighlight underlayColor='transparent' onPress={ () => this.displayPhoto(photo) } >
@@ -56,22 +43,17 @@ class Map extends Component {
         } else {
             markers = photosWithLocation.map((photo, i) =>
                 <MapView.Marker
-                    key={ i + '_' + Date.now() }
+                    key={ i }
                     coordinate={ photo.location }
                 >
-                    <TouchableHighlight underlayColor='transparent' onPress={ () => this.displayPhoto(photo) } >
-                        <Image source={{ uri: photo.url }} style={ styles.pin } />
-                    </TouchableHighlight>
+                    <ZoomImage
+                        source={{uri: photo.url}}
+                        imgStyle={styles.pin}
+                        style={styles.pin}
+                        duration={200}
+                        enableScaling={false}
+                    />
                 </MapView.Marker>
-            );
-        }
-
-        let content = <View></View>;
-        if (this.state.photo !== null) {
-            content = (
-                <Modal visible={true} transparent={true}>
-                    <ImageViewer imageUrls={[{ url: this.state.photo.url }]} onClick={ this.backToMap.bind(this) }/>
-                </Modal>
             );
         }
 
@@ -89,7 +71,6 @@ class Map extends Component {
                     >
                     { markers }
                     </MapView>
-                    { content }
                 </View>
             </GradientBackground>
         );
